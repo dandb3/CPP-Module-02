@@ -1,4 +1,4 @@
-NAME		=	a.out
+NAME		=	fixed
 SRCS		=	main.cpp Fixed.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 HEADERS		=	Fixed.hpp
