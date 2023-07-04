@@ -108,18 +108,12 @@ Fixed Fixed::operator-(const Fixed& fixed) const
 
 Fixed Fixed::operator*(const Fixed& fixed) const
 {
-	Fixed result;
-
-	result._fixedPointNum = this->_fixedPointNum * fixed._fixedPointNum;
-	return result;
+	return Fixed(this->toFloat() * fixed.toFloat());
 }
 
 Fixed Fixed::operator/(const Fixed& fixed) const
 {
-	Fixed result;
-
-	result._fixedPointNum = this->_fixedPointNum / fixed._fixedPointNum;
-	return result;
+	return Fixed(this->toFloat() / fixed.toFloat());
 }
 
 Fixed& Fixed::operator++()
